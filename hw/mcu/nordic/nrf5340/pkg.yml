@@ -104,3 +104,11 @@ pkg.deps.I2C_3':
 
 pkg.deps.NRF5340_EMBED_NET_CORE:
     - "@apache-mynewt-core/hw/mcu/nordic/nrf5340/net_core_image"
+
+# As per Errata 26 for Engineering RevA silicon we should not
+# depend on CTRL-AP: APPROTECT.DISABLE and SECUREAPPROTECT.DISABLE
+# registers since they are not functional. It causes quite a lot of
+# crashes and hardfaults, so enabling this will keep APPROTECT
+# control with UICR.
+pkg.cflags.MCU_NRF5340_EN_APPROTECT_USERHANDLING:
+    - "-DENABLE_APPROTECT_USER_HANDLING"
