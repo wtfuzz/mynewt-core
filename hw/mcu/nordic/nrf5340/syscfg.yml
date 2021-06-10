@@ -32,7 +32,6 @@ syscfg.defs:
             packages for network and application core that do have
             some differences depending on which core they are build for.
         value: 1
-        restrictions: MCU_NET_CORE==0
 
     MCU_FLASH_MIN_WRITE_SIZE:
         description: >
