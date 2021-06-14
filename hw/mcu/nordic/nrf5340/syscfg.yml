@@ -93,8 +93,7 @@ syscfg.defs:
     MCU_NRF5340_EN_APPROTECT_USERHANDLING:
         description: >
             This needs to be set by the BSP/App/Target if the
-            MCU is a Rev A Silicon so that APPROTECT is enabled
-            but handled by UICR instead.
+            MCU/BSP wants to handle APPROTECT on its own.
         value: 0
 
 # MCU peripherals definitions
